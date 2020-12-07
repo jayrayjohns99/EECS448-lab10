@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<style>
+
+			body{
+				display: flex;
+				background-color: tan;
+				color: black;
+				font-family: Helvetica;
+				justify-content: center;
+				align-items: center;
+			}
+
+			h1{
+				font-size: 30px;
+			}
+
+			button{
+				background-color: darkgray;
+				font-size: 25px;
+				border-radius: 15px;
+				color: black;
+			}
+
+			button:hover{
+				background-color: brown;
+			}
+
+		</style>
+
+		<script>
+
+			document.addEventListener('DOMContentLoaded', () => {
+
+				let mainLocation = "http://people.eecs.ku.edu/~j097j471/lab10/";
+
+				addLink("cuser", mainLocation + "exercise02/CreateUser.html");
+				addLink("upost", mainLocation + "exercise03/CreatePost.html");
+				addLink("vuser", mainLocation + "exercise05/viewUsers.php");
+				addLink("vpost", mainLocation + "exercise06/viewPosts.html");
+				addLink("dpost", mainLocation + "exercise07/deletePost.html");
+
+			});
+
+			function addLink(id, link){
+
+				document.getElementById(id).addEventListener('click', () => {
+					document.location = link;
+
+				});
+			}
+
+		</script>
+	</head>
+
+	<body>
+
+		<div class="page">
+
+		<h1> Admin Home </h1>
+
+		<button id="cuser">Create User</button>
+		<button id="upost">Upload Post</button>
+		<button id="vuser">View Users</button>
+		<button id="vpost">View Users' Posts</button>
+		<button id="dpost">Delete Users' Posts</button>
+
+		</div>
+	</body>
+</html>
