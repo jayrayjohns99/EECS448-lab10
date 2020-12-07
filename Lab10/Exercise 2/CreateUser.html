@@ -1,0 +1,25 @@
+<html>
+    <body>
+
+        <form action='CreateUser.php' method='post' onsubmit="return checkForm();">
+
+            <h1>Create a User:</h1>
+
+            <input name="input" id="input" type="text"></input>
+            <button type="submit">Submit</button>
+
+        </form>
+    </body>
+
+    <script>
+        function checkForm() {
+            let input = document.getElementById("input").value;
+
+            if (input == "" || input == null) {
+                alert("Please enter a username.");
+                return(false);
+            }
+            return(true);
+        }
+    </script>
+</html>

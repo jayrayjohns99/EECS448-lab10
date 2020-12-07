@@ -1,0 +1,29 @@
+<html>
+    <body>
+
+        <form action='CreatePost.php' method='post' onsubmit="return checkForm();">
+
+            <h1>Username:</h1>
+
+            <input name="username" id="username" type="text"></input>
+
+            <h2>Post:</h2>
+
+            <input name="input" id="input" type="text"></input>
+            <button type="submit">Submit</button>
+
+        </form>
+    </body>
+
+    <script>
+        function checkForm() {
+            let input = document.getElementById("username").value;
+
+            if (input == "" || input == null) {
+                alert("Please enter a username.");
+                return(false);
+            }
+            return(true);
+        }
+    </script>
+</html>
